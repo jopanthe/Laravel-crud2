@@ -19,4 +19,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/siswa', [App\Http\Controllers\SiswaController::class, 'index']);
+Route::get('/siswa', 'App\Http\Controllers\SiswaController@index');
+Route::post('/siswa/create', 'App\Http\Controllers\SiswaController@create');
+Route::get('/siswa/(id)/edit','SiswaController@edit');
+Route::post('/siswa/(id)/update','SiswaController@update');
+Route::get('/siswa/(id)/delete','SiswaController@delete');
